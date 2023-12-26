@@ -18,7 +18,7 @@ use App\Http\Controllers\StatementController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('user.index');
 });
 
 /*
