@@ -1,6 +1,7 @@
 @extends('layout.guest', ['title' => 'Вход в личный кабинет'])
 
 @section('content')
+    <div class="auth-form">
     <h1>Вход</h1>
     <form method="post" action="{{ route('auth.auth') }}">
         @csrf
@@ -9,12 +10,19 @@
                    required maxlength="255" value="{{ old('email') ?? '' }}">
         </div>
         <div class="form-group">
-            <input type="text" class="form-control" name="password" placeholder="Ваш пароль"
+            <input type="password" class="form-control" name="password" placeholder="Ваш пароль"
                    required maxlength="255" value="">
         </div>
         <div class="form-group">
-            <button type="submit">Войти</button>
+            <button type="submit" class="form-button">Войти</button>
         </div>
-        <a href="./register">регистрация</a>
     </form>
+    <form method="GET" action="{{ route('auth.register') }}">
+                @csrf
+
+                <button>
+                регистрация
+                </button>
+            </form>
+    </div>
 @endsection

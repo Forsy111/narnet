@@ -42,3 +42,29 @@ nav button {
     align-items: center;
     justify-content: space-between;
 }
+
+/* auth */
+.auth-form{
+    width: 80%;
+    margin: 10% auto;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.form-group{
+    margin-bottom: 1rem;
+}
+
+.form-control{
+    padding: 0.5rem;
+    border-radius: 10px;
+    width: 40%;
+}
+
+.form-button{
+    padding: 0.5rem;
+    border-radius: 10px;
+    width: 40%;
+}

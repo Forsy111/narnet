@@ -1,6 +1,7 @@
 @extends('layout.guest', ['title' => 'Регистрация'])
 
 @section('content')
+<div class="auth-form">
     <h1>Регистрация</h1>
     <form method="post" action="{{ route('auth.register') }}">
         @csrf
@@ -29,9 +30,16 @@
                    placeholder="Пароль еще раз" required maxlength="255" value="">
         </div>
         <div class="form-group">
-            <button type="submit">Регистрация</button>
+            <button type="submit" class="form-button">Регистрация</button>
         </div>
         
-        <a href="./login">авторизация</a>
     </form>
+    <form method="GET" action="{{ route('auth.login') }}">
+                @csrf
+
+                <button>
+                авторизация
+                </button>
+            </form>
+    </div>
 @endsection
