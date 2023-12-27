@@ -6,9 +6,11 @@
 composer update
 npm i
 npm run build
-php artisan key:generate
 ```
 Далее клонируем файл .env.example и переименовываем его в .env
+```
+php artisan key:generate
+```
 Вводим данные для подключения к БД
 Запускаем сервер:
 ```
